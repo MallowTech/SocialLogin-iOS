@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F896DCB1C3039F199E8BA0001358B8AF3E6EA774",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6B30306CFDE5C478277551A67D1BC4C925063975" : 0,
+    "F896DCB1C3039F199E8BA0001358B8AF3E6EA774" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5AFD7985-FAF7-44F2-B877-7590686CCC0B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6B30306CFDE5C478277551A67D1BC4C925063975" : "",
+    "F896DCB1C3039F199E8BA0001358B8AF3E6EA774" : "mt-sociallogin-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SocialLogin",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SocialLogin\/SocialLogin.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/server.local\/git\/OutLate",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6B30306CFDE5C478277551A67D1BC4C925063975"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/Mallowdev\/mt-sociallogin-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F896DCB1C3039F199E8BA0001358B8AF3E6EA774"
+    }
+  ]
+}

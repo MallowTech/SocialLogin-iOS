@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lpf-AZ-YlG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SLLoginViewController" id="BYZ-38-t0r" customClass="SLLoginViewController" customModule="SocialLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OHZ-dt-joQ">
+                                <rect key="frame" x="240" y="89" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="c8e-uR-UPC"/>
+                                    <constraint firstAttribute="width" constant="120" id="rFg-18-HTu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqZ-IE-c3Q" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="193" y="229" width="215" height="45"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yUE-tE-MXE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- OR ---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aON-5E-Drn">
+                                <rect key="frame" x="263" y="290" width="75" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-l1-0Bf">
+                                <rect key="frame" x="193" y="331" width="215" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jyy-Zp-sG2"/>
+                                </constraints>
+                                <state key="normal" image="Sign-in-Large"/>
+                                <connections>
+                                    <action selector="linkedInLoginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ug-8z-sui"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xy3-l1-0Bf" firstAttribute="top" secondItem="aON-5E-Drn" secondAttribute="bottom" constant="20" id="2ss-HW-gQJ"/>
+                            <constraint firstItem="oqZ-IE-c3Q" firstAttribute="top" secondItem="OHZ-dt-joQ" secondAttribute="bottom" constant="20" id="Eug-Hi-QdE"/>
+                            <constraint firstItem="oqZ-IE-c3Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jwc-MZ-bEe"/>
+                            <constraint firstItem="aON-5E-Drn" firstAttribute="top" secondItem="oqZ-IE-c3Q" secondAttribute="bottom" constant="16" id="O7T-PZ-z0Y"/>
+                            <constraint firstItem="xy3-l1-0Bf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OiU-Wm-WkI"/>
+                            <constraint firstItem="aON-5E-Drn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z9o-MG-NO8"/>
+                            <constraint firstItem="xy3-l1-0Bf" firstAttribute="width" secondItem="oqZ-IE-c3Q" secondAttribute="width" id="g3X-nz-Anq"/>
+                            <constraint firstItem="aON-5E-Drn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSR-f7-5KZ"/>
+                            <constraint firstItem="xy3-l1-0Bf" firstAttribute="height" secondItem="oqZ-IE-c3Q" secondAttribute="height" id="kM6-ck-oJ8"/>
+                            <constraint firstItem="OHZ-dt-joQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mEK-TP-TmO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LOGIN" id="4vo-zt-Dhv"/>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="oqZ-IE-c3Q" id="OAL-y2-typ"/>
+                        <outlet property="linkedInLoginButton" destination="xy3-l1-0Bf" id="z0k-jv-Yls"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="346"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="565-el-J0h">
+            <objects>
+                <viewController storyboardIdentifier="SLProfileViewController" id="5YD-9m-csh" customClass="SLProfileViewController" customModule="SocialLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lox-XD-0hk"/>
+                        <viewControllerLayoutGuide type="bottom" id="mXW-pR-flE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qT3-s9-wHv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile refresh failed. Please try again." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zf-v6-7Aa">
+                                <rect key="frame" x="20" y="250" width="560" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="qPg-Nx-bFV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jzu-uw-5Sb">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FacebookImageCellIdentifier" rowHeight="120" id="fDo-xm-vh1" customClass="SLProfileImageCell" customModule="SocialLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fDo-xm-vh1" id="alf-VB-GZB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3I3-40-P9e" customClass="FBSDKProfilePictureView">
+                                                    <rect key="frame" x="240" y="0.0" width="120" height="120"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="6HT-8n-UVJ"/>
+                                                        <constraint firstAttribute="height" constant="120" id="h0O-QL-Dqx"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3I3-40-P9e" firstAttribute="centerY" secondItem="alf-VB-GZB" secondAttribute="centerY" id="e4Y-ag-zM7"/>
+                                                <constraint firstItem="3I3-40-P9e" firstAttribute="centerX" secondItem="alf-VB-GZB" secondAttribute="centerX" id="vkP-kQ-UzI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="profileView" destination="3I3-40-P9e" id="D8k-nU-BRR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LinkedInImageCellIdentifier" rowHeight="120" id="QDP-J8-32q" customClass="SLProfileImageCell" customModule="SocialLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="148" width="600" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QDP-J8-32q" id="maW-mg-xQG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T09-sb-t2u">
+                                                    <rect key="frame" x="240" y="0.0" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="262-a5-jPT"/>
+                                                        <constraint firstAttribute="width" constant="120" id="lBq-4w-g4R"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T09-sb-t2u" firstAttribute="centerX" secondItem="maW-mg-xQG" secondAttribute="centerX" id="WeE-IL-B5L"/>
+                                                <constraint firstItem="T09-sb-t2u" firstAttribute="centerY" secondItem="maW-mg-xQG" secondAttribute="centerY" id="vP5-bn-NC3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="linkedInImageView" destination="T09-sb-t2u" id="NdF-2x-nRL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailsCellIdentifier" id="EjM-Ft-72Q" customClass="SLProfileDetailsTableViewCell" customModule="SocialLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="268" width="600" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EjM-Ft-72Q" id="mey-HQ-MGR">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwC-oP-qoq">
+                                                    <rect key="frame" x="20" y="10" width="560" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNd-0o-CEp">
+                                                    <rect key="frame" x="20" y="38" width="560" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MNd-0o-CEp" secondAttribute="bottom" constant="10" id="46h-uV-PuZ"/>
+                                                <constraint firstItem="MNd-0o-CEp" firstAttribute="top" secondItem="FwC-oP-qoq" secondAttribute="bottom" constant="10" id="5O0-KZ-eok"/>
+                                                <constraint firstItem="MNd-0o-CEp" firstAttribute="leading" secondItem="mey-HQ-MGR" secondAttribute="leading" constant="20" id="ALX-P6-anc"/>
+                                                <constraint firstAttribute="trailing" secondItem="MNd-0o-CEp" secondAttribute="trailing" constant="20" id="Chb-tM-Cc6"/>
+                                                <constraint firstItem="FwC-oP-qoq" firstAttribute="leading" secondItem="mey-HQ-MGR" secondAttribute="leading" constant="20" id="cak-dH-dgC"/>
+                                                <constraint firstAttribute="trailing" secondItem="FwC-oP-qoq" secondAttribute="trailing" constant="20" id="fue-jQ-EOz"/>
+                                                <constraint firstItem="FwC-oP-qoq" firstAttribute="top" secondItem="mey-HQ-MGR" secondAttribute="top" constant="10" id="gQl-Ke-ZUv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="FwC-oP-qoq" id="9NU-gt-cjO"/>
+                                            <outlet property="valueLabel" destination="MNd-0o-CEp" id="0t6-Oy-7ld"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5YD-9m-csh" id="AJ3-vP-ekS"/>
+                                    <outlet property="delegate" destination="5YD-9m-csh" id="jY2-6V-fTp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mXW-pR-flE" firstAttribute="top" secondItem="jzu-uw-5Sb" secondAttribute="bottom" id="2EC-Bd-lG2"/>
+                            <constraint firstItem="jzu-uw-5Sb" firstAttribute="top" secondItem="lox-XD-0hk" secondAttribute="bottom" id="43v-Cc-l05"/>
+                            <constraint firstItem="jzu-uw-5Sb" firstAttribute="leading" secondItem="qT3-s9-wHv" secondAttribute="leading" id="5EY-bg-nUU"/>
+                            <constraint firstItem="0Zf-v6-7Aa" firstAttribute="leading" secondItem="qT3-s9-wHv" secondAttribute="leadingMargin" id="AZT-iO-cXg"/>
+                            <constraint firstAttribute="trailing" secondItem="jzu-uw-5Sb" secondAttribute="trailing" id="BAW-KT-FLk"/>
+                            <constraint firstItem="0Zf-v6-7Aa" firstAttribute="centerX" secondItem="qT3-s9-wHv" secondAttribute="centerX" id="R5t-Fq-2d2"/>
+                            <constraint firstItem="0Zf-v6-7Aa" firstAttribute="centerY" secondItem="qT3-s9-wHv" secondAttribute="centerY" id="nEF-an-jrE"/>
+                            <constraint firstItem="0Zf-v6-7Aa" firstAttribute="trailing" secondItem="qT3-s9-wHv" secondAttribute="trailingMargin" id="oxz-L6-AH3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="Joy-6c-xeA">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="G1A-JN-eVW">
+                            <connections>
+                                <action selector="logoutButtonPressed" destination="5YD-9m-csh" id="5aQ-5d-LVk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="atD-0F-rha">
+                            <connections>
+                                <action selector="refreshButtonPressed" destination="5YD-9m-csh" id="q7i-38-SD2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="notFoundLabel" destination="0Zf-v6-7Aa" id="kdv-AQ-enW"/>
+                        <outlet property="refreshButton" destination="atD-0F-rha" id="D8Z-I4-Sp5"/>
+                        <outlet property="tableView" destination="jzu-uw-5Sb" id="0SF-iZ-Jrq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALY-B3-ZqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RhC-9R-Ram">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lpf-AZ-YlG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="poA-AA-h0v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DVx-qa-dLF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBS-Uz-dXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456" y="346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Sign-in-Large" width="215" height="41"/>
+    </resources>
+</document>
