@@ -9,16 +9,25 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
-
-
+    var googleIdToken: String?
+    var googleImageURL: NSURL?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         FBSDKLoginButton.classForCoder()
         FBSDKProfile.enableUpdatesOnAccessTokenChange(true)
+        
+        // Google sign in setup
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        GIDSignIn.sharedInstance().delegate = self
+
         
         // Set UI Apperance 
         configureUIApperance()
@@ -60,6 +69,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func application(application: UIApplication, openURL url: NSURL, options: [String: AnyObject]) -> Bool {
+        if #available(iOS 9.0, *) {
+            return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as? String, annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
+        } else {
+            return true
+        }
+        
+    }
     
     // MARK: Custom Methods
     
@@ -106,5 +123,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.slLinkedInThemeColor()
     }
     
+    func configureUIAppearanceForGoogle() {
+        UINavigationBar.appearance().tintColor = UIColor.slGoogleThemeColor()
+        UINavigationBar.appearance().barTintColor = UIColor.slGoogleThemeColor()
+    }
+    
+    
+    // MARK: - Google GIDSignInDelegate methods
+    
+     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        if (error == nil) {
+            // Perform any operations on signed in user here.
+            googleIdToken = user.authentication.idToken // Safe to send to the server
+            let fullName = user.profile.name
+            let email = user.profile.email
+            if user.profile.hasImage == true {
+                googleImageURL = user.profile.imageURLWithDimension(300)
+            }
+            let details: [(String, String?)] = [("Picture", "\((googleImageURL?.absoluteString!)! as String)"),("Full Name", "\(fullName)"), ("email", "\(email)")]
+            SLGoogleManager.sharedInstance.details = details
+            configureUIAppearanceForGoogle()
+            profileAsRootViewController()
+        } else {
+            print("\(error.localizedDescription)")
+        }
+    }
+    
+    // Finished disconnecting |user| from the app successfully if |error| is |nil|.
+     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
+        
+    }
 }
 

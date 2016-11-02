@@ -12,6 +12,7 @@ class SLProfileImageCell: UITableViewCell {
 
     @IBOutlet var profileView: FBSDKProfilePictureView!
     @IBOutlet var linkedInImageView: UIImageView!
+    @IBOutlet weak var googleProfileImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,16 @@ class SLProfileImageCell: UITableViewCell {
         self.linkedInImageView.sd_setImageWithURL(NSURL(string: urlString), placeholderImage: UIImage(named: "user_profile")) { (image, error, type, url) in
             if ((image) != nil) {
                 self.linkedInImageView.image = image
+            }
+        }
+    }
+    
+    func googleProfileImage(urlString: String) {
+            let url = NSURL(string: urlString as String)
+            let request: NSURLRequest = NSURLRequest(URL: url!)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) in
+            if error == nil {
+                self.googleProfileImageView.image = UIImage(data: data!)
             }
         }
     }

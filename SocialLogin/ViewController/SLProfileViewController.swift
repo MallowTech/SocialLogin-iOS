@@ -11,6 +11,7 @@ import UIKit
 let kProfileDetailCell = "DetailsCellIdentifier"
 let kFacebookProfileImageCell = "FacebookImageCellIdentifier"
 let kLinkedInProfileImageCell = "LinkedInImageCellIdentifier"
+let kGoogleProfileImageCell = "GoogleProfileImageCellIdentifier"
 let kLogoutCell = "LogoutCellIdentifier"
 
 let kEstimatedRowHeight: CGFloat = 60.0
@@ -61,6 +62,8 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
                 FBSDKLoginManager().logOut()
             } else if LISDKSessionManager.hasValidSession() {
                 SLLinkedInManager.sharedInstance.logout()
+            } else if kAppDelegate.googleIdToken != nil {
+                SLGoogleManager.sharedInstance.logout()
             }
             kAppDelegate.configureRootViewController()
         }
@@ -93,6 +96,9 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
                     self.reloadProfileData()
                     SLAlertHelper.showAlertWith(kAlertTitleError, message: errorMessage, inController: self)
             })
+        } else {
+            self.profileArray = SLGoogleManager.sharedInstance.details
+            self.reloadProfileData()
         }
         
     }
@@ -139,6 +145,12 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
                     return UITableViewCell()
                 }
                 imageCell.downLoadImage(self.profileArray[indexPath.row].1!)
+                return imageCell
+            } else if kAppDelegate.googleIdToken != nil {
+                guard let imageCell = tableView.dequeueReusableCellWithIdentifier(kGoogleProfileImageCell, forIndexPath: indexPath) as? SLProfileImageCell else {
+                    return UITableViewCell()
+                }
+                imageCell.googleProfileImage(self.profileArray[indexPath.row].1!)
                 return imageCell
             }
             return UITableViewCell()

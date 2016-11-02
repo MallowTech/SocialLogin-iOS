@@ -18,4 +18,8 @@ extension UIColor {
         return UIColor(red: 0/255, green: 123/255, blue: 181/255, alpha: 1.0)
     }
     
+    class func slGoogleThemeColor() -> UIColor {
+        return UIColor(red: 0.85, green: 0.27, blue: 0.24, alpha: 1.0)
+    }
+    
 }

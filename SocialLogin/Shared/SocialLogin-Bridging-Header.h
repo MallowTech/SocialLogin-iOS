@@ -15,3 +15,8 @@
 
 // SDWebImage SDK
 #import <SDWebImage/UIImageView+WebCache.h>
+
+
+// Google SDK
+
+#import <Google/SignIn.h>
