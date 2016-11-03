@@ -9,12 +9,8 @@
 import UIKit
 
 class SLGoogleManager: NSObject {
+    
     static let sharedInstance = SLLinkedInManager()
     var details: [(String, String?)] = []
-    var idToken: String = ""
-    
-    func logout() {
-        GIDSignIn.sharedInstance().signOut()
-    }
     
 }

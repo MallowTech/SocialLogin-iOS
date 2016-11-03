@@ -63,7 +63,7 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
             } else if LISDKSessionManager.hasValidSession() {
                 SLLinkedInManager.sharedInstance.logout()
             } else if kAppDelegate.googleIdToken != nil {
-                SLGoogleManager.sharedInstance.logout()
+                 GIDSignIn.sharedInstance().signOut()
             }
             kAppDelegate.configureRootViewController()
         }
@@ -96,7 +96,7 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
                     self.reloadProfileData()
                     SLAlertHelper.showAlertWith(kAlertTitleError, message: errorMessage, inController: self)
             })
-        } else {
+        } else if kAppDelegate.googleIdToken != nil {
             self.profileArray = SLGoogleManager.sharedInstance.details
             self.reloadProfileData()
         }

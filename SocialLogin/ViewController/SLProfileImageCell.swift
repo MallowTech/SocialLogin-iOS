@@ -14,6 +14,9 @@ class SLProfileImageCell: UITableViewCell {
     @IBOutlet var linkedInImageView: UIImageView!
     @IBOutlet weak var googleProfileImageView: UIImageView!
     
+    
+    // MARK: - View life cycle methods
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +28,9 @@ class SLProfileImageCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    // MARK: - Custom methods
+    
     func downLoadImage(urlString: String) {
         self.linkedInImageView.sd_setImageWithURL(NSURL(string: urlString), placeholderImage: UIImage(named: "user_profile")) { (image, error, type, url) in
             if ((image) != nil) {

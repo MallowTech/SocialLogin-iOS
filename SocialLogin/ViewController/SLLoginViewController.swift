@@ -26,7 +26,10 @@ class SLLoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSign
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         GIDSignIn.sharedInstance().uiDelegate = self
+        
+        // Google sign in
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
         // Facebook Permissions
         facebookLoginButton.readPermissions = [SLFacebookPermission.PublicProfile.rawValue, SLFacebookPermission.Email.rawValue];
         

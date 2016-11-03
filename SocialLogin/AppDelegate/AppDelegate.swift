@@ -25,9 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
-        
         GIDSignIn.sharedInstance().delegate = self
-
         
         // Set UI Apperance 
         configureUIApperance()
@@ -81,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     // MARK: Custom Methods
     
     func configureRootViewController() {
-        if ((FBSDKAccessToken.currentAccessToken()) != nil || LISDKSessionManager.hasValidSession()) {
+        if ((FBSDKAccessToken.currentAccessToken()) != nil || LISDKSessionManager.hasValidSession() || GIDSignIn.sharedInstance().currentUser != nil) {
             profileAsRootViewController()
         } else {
             loginAsRootViewController()
@@ -110,7 +108,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             configureUIAppearanceForFaceBook()
         } else if (LISDKSessionManager.hasValidSession()) {
             configureUIAppearanceForLinkedIn()
+        } else if GIDSignIn.sharedInstance().currentUser != nil {
+            configureUIAppearanceForGoogle()
         }
+        
     }
     
     func configureUIAppearanceForFaceBook() {
@@ -151,7 +152,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     // Finished disconnecting |user| from the app successfully if |error| is |nil|.
      func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
-        
+            // Nothing to implement here
     }
+    
 }
 
