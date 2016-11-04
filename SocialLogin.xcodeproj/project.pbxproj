@@ -23,7 +23,7 @@
 		1967CCBB1D6B3147003327DC /* SLLinkedInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCBA1D6B3147003327DC /* SLLinkedInManager.swift */; };
 		1967CCBD1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCBC1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift */; };
 		19B206581D6C14EF0053CDEF /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B206571D6C14EF0053CDEF /* SDWebImage.framework */; };
-		A08202E5C0F970C4D9B46097 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145B6B9804678C725ECEB22F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CD73E81EE66B892FEDCCB57F /* Pods_SocialLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A87390B2918B42B0FA02E96E /* Pods_SocialLogin.framework */; };
 		EC59928B1D6B7A00002406B0 /* SLProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59928A1D6B7A00002406B0 /* SLProfileImageCell.swift */; };
 		EC59928F1D6B8404002406B0 /* SLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59928E1D6B8404002406B0 /* SLExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -49,12 +49,13 @@
 		1967CCBA1D6B3147003327DC /* SLLinkedInManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLinkedInManager.swift; sourceTree = "<group>"; };
 		1967CCBC1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		19B206571D6C14EF0053CDEF /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SocialLogin-epvuzypgvcbytuedvqxasjygmoxi/Build/Products/Debug-iphoneos/SDWebImage.framework"; sourceTree = "<group>"; };
-		3DE6BBFC87EE6A0F96CD4DB7 /* Pods.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.distribution.xcconfig; path = "Pods/Target Support Files/Pods/Pods.distribution.xcconfig"; sourceTree = "<group>"; };
-		6039CBFCC10F285D416D84FE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A2D0E15EACB13D1427CB3091 /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
+		4D82E49A5AD5DC9E3625E49C /* Pods-SocialLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		543BCE4D7C40B97D5B23EE24 /* Pods-SocialLogin.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.distribution.xcconfig"; sourceTree = "<group>"; };
+		56FDD6AB9B60E781316BE562 /* Pods-SocialLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.release.xcconfig"; sourceTree = "<group>"; };
+		A87390B2918B42B0FA02E96E /* Pods_SocialLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62EC6D3E7B5F1BB6A4241A8 /* Pods-SocialLogin.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.adhoc.xcconfig"; sourceTree = "<group>"; };
 		EC59928A1D6B7A00002406B0 /* SLProfileImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileImageCell.swift; sourceTree = "<group>"; };
 		EC59928E1D6B8404002406B0 /* SLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLExtensions.swift; sourceTree = "<group>"; };
-		F128F67A3BECB1FF407C482E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +68,7 @@
 				1967CCA71D6B0778003327DC /* FBSDKLoginKit.framework in Frameworks */,
 				1967CCA61D6B0778003327DC /* FBSDKCoreKit.framework in Frameworks */,
 				1967CCAC1D6B0EE9003327DC /* Bolts.framework in Frameworks */,
-				A08202E5C0F970C4D9B46097 /* Pods.framework in Frameworks */,
+				CD73E81EE66B892FEDCCB57F /* Pods_SocialLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +80,8 @@
 			children = (
 				1967CC6F1D6AFEB3003327DC /* SocialLogin */,
 				1967CC6E1D6AFEB2003327DC /* Products */,
-				3C6F8E08CB5378E5693C53BB /* Pods */,
 				99A48088ACF20E39649DFC0D /* Frameworks */,
+				F8E9CB38727A1A14E067EF29 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,24 +191,25 @@
 			path = Bolt;
 			sourceTree = "<group>";
 		};
-		3C6F8E08CB5378E5693C53BB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6039CBFCC10F285D416D84FE /* Pods.debug.xcconfig */,
-				F128F67A3BECB1FF407C482E /* Pods.release.xcconfig */,
-				3DE6BBFC87EE6A0F96CD4DB7 /* Pods.distribution.xcconfig */,
-				A2D0E15EACB13D1427CB3091 /* Pods.adhoc.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		99A48088ACF20E39649DFC0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				19B206571D6C14EF0053CDEF /* SDWebImage.framework */,
 				145B6B9804678C725ECEB22F /* Pods.framework */,
+				A87390B2918B42B0FA02E96E /* Pods_SocialLogin.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8E9CB38727A1A14E067EF29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D82E49A5AD5DC9E3625E49C /* Pods-SocialLogin.debug.xcconfig */,
+				56FDD6AB9B60E781316BE562 /* Pods-SocialLogin.release.xcconfig */,
+				543BCE4D7C40B97D5B23EE24 /* Pods-SocialLogin.distribution.xcconfig */,
+				E62EC6D3E7B5F1BB6A4241A8 /* Pods-SocialLogin.adhoc.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1967CC7F1D6AFEB3003327DC /* Build configuration list for PBXNativeTarget "SocialLogin" */;
 			buildPhases = (
-				D1B38F646BCE1E949DF38219 /* Check Pods Manifest.lock */,
+				C554A0CB8473F296A1B3FB82 /* [CP] Check Pods Manifest.lock */,
 				1967CC691D6AFEB2003327DC /* Sources */,
 				1967CC6A1D6AFEB2003327DC /* Frameworks */,
 				1967CC6B1D6AFEB2003327DC /* Resources */,
-				B9423AECA20DF297FF2FCEB5 /* Embed Pods Frameworks */,
-				A88AAEC53AC5264A0B5329F4 /* Copy Pods Resources */,
+				2DF99A5D323220525E073396 /* [CP] Embed Pods Frameworks */,
+				1224686488562CD83E1471B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +248,7 @@
 				TargetAttributes = {
 					1967CC6C1D6AFEB2003327DC = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -281,44 +284,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A88AAEC53AC5264A0B5329F4 /* Copy Pods Resources */ = {
+		1224686488562CD83E1471B0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9423AECA20DF297FF2FCEB5 /* Embed Pods Frameworks */ = {
+		2DF99A5D323220525E073396 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D1B38F646BCE1E949DF38219 /* Check Pods Manifest.lock */ = {
+		C554A0CB8473F296A1B3FB82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,7 +456,7 @@
 		};
 		1967CC801D6AFEB3003327DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6039CBFCC10F285D416D84FE /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4D82E49A5AD5DC9E3625E49C /* Pods-SocialLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -470,13 +473,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.sociallogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialLogin/Shared/SocialLogin-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		1967CC811D6AFEB3003327DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F128F67A3BECB1FF407C482E /* Pods.release.xcconfig */;
+			baseConfigurationReference = 56FDD6AB9B60E781316BE562 /* Pods-SocialLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -493,6 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.sociallogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialLogin/Shared/SocialLogin-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -537,7 +542,7 @@
 		};
 		1967CC831D6AFEE7003327DC /* Adhoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2D0E15EACB13D1427CB3091 /* Pods.adhoc.xcconfig */;
+			baseConfigurationReference = E62EC6D3E7B5F1BB6A4241A8 /* Pods-SocialLogin.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -554,6 +559,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.sociallogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialLogin/Shared/SocialLogin-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Adhoc;
@@ -598,7 +604,7 @@
 		};
 		1967CC851D6AFEEF003327DC /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DE6BBFC87EE6A0F96CD4DB7 /* Pods.distribution.xcconfig */;
+			baseConfigurationReference = 543BCE4D7C40B97D5B23EE24 /* Pods-SocialLogin.distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -615,6 +621,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mallowtech.sociallogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialLogin/Shared/SocialLogin-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Distribution;
