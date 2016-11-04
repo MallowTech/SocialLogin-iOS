@@ -22,3 +22,11 @@ let kCommonOfflineErrorMessage = "Your Internet connection appears to be offline
 let kFacebookUserCancelledErrorMessage = "User has cancelled the Facebook login"
 let kAlertTitleOops = "Oops!!"
 let kAlertTitleError = "Error!!"
+
+//Instagram details
+let kClientId = "fbd7122dde04448b8d631a216e51aa64"
+let kClientSecret = "82dac4df17a64049a9c88e574df15fbe"
+let kGrantType = "authorization_code"
+let kRedirectUri = "https://callback.com/"
+let kInstagramAccessTokenPath = "https://api.instagram.com/oauth/access_token"
+let kInstagramAuthenticatePath = "https://api.instagram.com/oauth/authorize/"

@@ -61,6 +61,8 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
                 FBSDKLoginManager().logOut()
             } else if LISDKSessionManager.hasValidSession() {
                 SLLinkedInManager.sharedInstance.logout()
+            } else if kAppDelegate.instagramAccessToken != nil {
+                 SLInstagramManager.sharedInstance.logout()
             }
             kAppDelegate.configureRootViewController()
         }
@@ -93,8 +95,15 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
                     self.reloadProfileData()
                     SLAlertHelper.showAlertWith(kAlertTitleError, message: errorMessage, inController: self)
             })
+        } else if kAppDelegate.instagramAccessToken != nil {
+            SLInstagramManager.sharedInstance.userDetails(kAppDelegate.instagramAccessToken!, success: { (status) in
+                self.profileArray = SLInstagramManager.sharedInstance.details
+                self.reloadProfileData()
+                }, failure: { (error) in
+                    self.reloadProfileData()
+                    SLAlertHelper.showAlertWith(kAlertTitleError, message: error, inController: self)
+            })
         }
-        
     }
     
     func reloadProfileData() {
@@ -115,7 +124,6 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
         activityIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         activityIndicator?.hidesWhenStopped = true
         activityIndicator?.stopAnimating()
-        
         activityIndicatoryBarButton = UIBarButtonItem(customView: self.activityIndicator!)
     }
     
@@ -140,6 +148,11 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
                 }
                 imageCell.downLoadImage(self.profileArray[indexPath.row].1!)
                 return imageCell
+            } else if kAppDelegate.instagramAccessToken != nil {
+                guard let imageCell = tableView.dequeueReusableCellWithIdentifier(kLinkedInProfileImageCell, forIndexPath: indexPath) as? SLProfileImageCell else {
+                    return UITableViewCell()
+                }
+                imageCell.downLoadImage(self.profileArray[indexPath.row].1!)
             }
             return UITableViewCell()
         } else {

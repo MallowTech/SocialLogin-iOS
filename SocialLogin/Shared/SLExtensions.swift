@@ -18,4 +18,24 @@ extension UIColor {
         return UIColor(red: 0/255, green: 123/255, blue: 181/255, alpha: 1.0)
     }
     
+    class func slInstagramThemeColor() -> UIColor {
+        return UIColor(red: 205/255, green: 72/255, blue: 107/255, alpha: 1.0)
+    }
+    
+}
+
+extension Dictionary {
+    
+    func paramsString() -> String {
+        var paramsString = [String]()
+        for (key, value) in self {
+            guard let stringValue = value as? String, let stringKey = key as? String else {
+                return ""
+            }
+            paramsString += [stringKey + "=" + "\(stringValue)"]
+            
+        }
+        return (paramsString.isEmpty ? "" : paramsString.joinWithSeparator("&"))
+    }
+    
 }

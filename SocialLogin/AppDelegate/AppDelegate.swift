@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var instagramAccessToken: String?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -104,6 +105,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configureUIAppearanceForLinkedIn() {
         UINavigationBar.appearance().tintColor = UIColor.slLinkedInThemeColor()
         UINavigationBar.appearance().barTintColor = UIColor.slLinkedInThemeColor()
+    }
+    
+    func configureUIAppearanceForInstagram() {
+        UINavigationBar.appearance().tintColor = UIColor.slInstagramThemeColor()
+        UINavigationBar.appearance().barTintColor = UIColor.slInstagramThemeColor()
     }
     
 }

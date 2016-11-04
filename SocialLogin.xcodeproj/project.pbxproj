@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1967CC921D6AFF9B003327DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CC871D6AFF9B003327DC /* AppDelegate.swift */; };
 		1967CC931D6AFF9B003327DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1967CC891D6AFF9B003327DC /* Assets.xcassets */; };
 		1967CC941D6AFF9B003327DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967CC8C1D6AFF9B003327DC /* LaunchScreen.storyboard */; };
 		1967CC951D6AFF9B003327DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1967CC8E1D6AFF9B003327DC /* Main.storyboard */; };
@@ -15,47 +14,52 @@
 		1967CCA71D6B0778003327DC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967CCA31D6B0778003327DC /* FBSDKLoginKit.framework */; };
 		1967CCA81D6B0778003327DC /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967CCA51D6B0778003327DC /* linkedin-sdk.framework */; };
 		1967CCAC1D6B0EE9003327DC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1967CCAB1D6B0EE9003327DC /* Bolts.framework */; };
-		1967CCB01D6B1998003327DC /* SLLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCAF1D6B1998003327DC /* SLLoginViewController.swift */; };
-		1967CCB21D6B19A6003327DC /* SLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCB11D6B19A6003327DC /* SLConstant.swift */; };
-		1967CCB41D6B1BB2003327DC /* SLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCB31D6B1BB2003327DC /* SLProfileViewController.swift */; };
-		1967CCB71D6B2760003327DC /* SLAlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCB61D6B2760003327DC /* SLAlertHelper.swift */; };
-		1967CCB91D6B3135003327DC /* SLFacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCB81D6B3135003327DC /* SLFacebookManager.swift */; };
-		1967CCBB1D6B3147003327DC /* SLLinkedInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCBA1D6B3147003327DC /* SLLinkedInManager.swift */; };
-		1967CCBD1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1967CCBC1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift */; };
 		19B206581D6C14EF0053CDEF /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B206571D6C14EF0053CDEF /* SDWebImage.framework */; };
+		85972A181DCC5B4400C5CC61 /* SLAlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A0B1DCC5B4400C5CC61 /* SLAlertHelper.swift */; };
+		85972A191DCC5B4400C5CC61 /* SLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A0C1DCC5B4400C5CC61 /* SLConstant.swift */; };
+		85972A1A1DCC5B4400C5CC61 /* SLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A0D1DCC5B4400C5CC61 /* SLExtensions.swift */; };
+		85972A1B1DCC5B4400C5CC61 /* SLFacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A0E1DCC5B4400C5CC61 /* SLFacebookManager.swift */; };
+		85972A1C1DCC5B4400C5CC61 /* SLInstagramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A0F1DCC5B4400C5CC61 /* SLInstagramManager.swift */; };
+		85972A1D1DCC5B4400C5CC61 /* SLLinkedInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A101DCC5B4400C5CC61 /* SLLinkedInManager.swift */; };
+		85972A1E1DCC5B4400C5CC61 /* SLInstagramLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A131DCC5B4400C5CC61 /* SLInstagramLoginViewController.swift */; };
+		85972A1F1DCC5B4400C5CC61 /* SLLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A141DCC5B4400C5CC61 /* SLLoginViewController.swift */; };
+		85972A201DCC5B4400C5CC61 /* SLProfileDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A151DCC5B4400C5CC61 /* SLProfileDetailsTableViewCell.swift */; };
+		85972A211DCC5B4400C5CC61 /* SLProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A161DCC5B4400C5CC61 /* SLProfileImageCell.swift */; };
+		85972A221DCC5B4400C5CC61 /* SLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A171DCC5B4400C5CC61 /* SLProfileViewController.swift */; };
+		85972A251DCC5B8200C5CC61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85972A241DCC5B8200C5CC61 /* AppDelegate.swift */; };
 		CD73E81EE66B892FEDCCB57F /* Pods_SocialLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A87390B2918B42B0FA02E96E /* Pods_SocialLogin.framework */; };
-		EC59928B1D6B7A00002406B0 /* SLProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59928A1D6B7A00002406B0 /* SLProfileImageCell.swift */; };
-		EC59928F1D6B8404002406B0 /* SLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59928E1D6B8404002406B0 /* SLExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		145B6B9804678C725ECEB22F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1967CC6D1D6AFEB2003327DC /* SocialLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1967CC7C1D6AFEB3003327DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1967CC871D6AFF9B003327DC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1967CC891D6AFF9B003327DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1967CC8D1D6AFF9B003327DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1967CC8F1D6AFF9B003327DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1967CCA21D6B0778003327DC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1967CCA31D6B0778003327DC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1967CCA51D6B0778003327DC /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
-		1967CCA91D6B09CB003327DC /* SocialLogin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialLogin-Bridging-Header.h"; sourceTree = "<group>"; };
 		1967CCAB1D6B0EE9003327DC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		1967CCAF1D6B1998003327DC /* SLLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLoginViewController.swift; sourceTree = "<group>"; };
-		1967CCB11D6B19A6003327DC /* SLConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLConstant.swift; sourceTree = "<group>"; };
-		1967CCB31D6B1BB2003327DC /* SLProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileViewController.swift; sourceTree = "<group>"; };
-		1967CCB61D6B2760003327DC /* SLAlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAlertHelper.swift; sourceTree = "<group>"; };
-		1967CCB81D6B3135003327DC /* SLFacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFacebookManager.swift; sourceTree = "<group>"; };
-		1967CCBA1D6B3147003327DC /* SLLinkedInManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLinkedInManager.swift; sourceTree = "<group>"; };
-		1967CCBC1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		19B206571D6C14EF0053CDEF /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SocialLogin-epvuzypgvcbytuedvqxasjygmoxi/Build/Products/Debug-iphoneos/SDWebImage.framework"; sourceTree = "<group>"; };
 		4D82E49A5AD5DC9E3625E49C /* Pods-SocialLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		543BCE4D7C40B97D5B23EE24 /* Pods-SocialLogin.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.distribution.xcconfig"; sourceTree = "<group>"; };
 		56FDD6AB9B60E781316BE562 /* Pods-SocialLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.release.xcconfig"; sourceTree = "<group>"; };
+		85972A0B1DCC5B4400C5CC61 /* SLAlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAlertHelper.swift; sourceTree = "<group>"; };
+		85972A0C1DCC5B4400C5CC61 /* SLConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLConstant.swift; sourceTree = "<group>"; };
+		85972A0D1DCC5B4400C5CC61 /* SLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLExtensions.swift; sourceTree = "<group>"; };
+		85972A0E1DCC5B4400C5CC61 /* SLFacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFacebookManager.swift; sourceTree = "<group>"; };
+		85972A0F1DCC5B4400C5CC61 /* SLInstagramManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLInstagramManager.swift; sourceTree = "<group>"; };
+		85972A101DCC5B4400C5CC61 /* SLLinkedInManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLinkedInManager.swift; sourceTree = "<group>"; };
+		85972A111DCC5B4400C5CC61 /* SocialLogin-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialLogin-Bridging-Header.h"; sourceTree = "<group>"; };
+		85972A131DCC5B4400C5CC61 /* SLInstagramLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLInstagramLoginViewController.swift; sourceTree = "<group>"; };
+		85972A141DCC5B4400C5CC61 /* SLLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLLoginViewController.swift; sourceTree = "<group>"; };
+		85972A151DCC5B4400C5CC61 /* SLProfileDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		85972A161DCC5B4400C5CC61 /* SLProfileImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileImageCell.swift; sourceTree = "<group>"; };
+		85972A171DCC5B4400C5CC61 /* SLProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileViewController.swift; sourceTree = "<group>"; };
+		85972A241DCC5B8200C5CC61 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A87390B2918B42B0FA02E96E /* Pods_SocialLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E62EC6D3E7B5F1BB6A4241A8 /* Pods-SocialLogin.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLogin.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLogin/Pods-SocialLogin.adhoc.xcconfig"; sourceTree = "<group>"; };
-		EC59928A1D6B7A00002406B0 /* SLProfileImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLProfileImageCell.swift; sourceTree = "<group>"; };
-		EC59928E1D6B8404002406B0 /* SLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,23 +100,15 @@
 		1967CC6F1D6AFEB3003327DC /* SocialLogin */ = {
 			isa = PBXGroup;
 			children = (
+				85972A231DCC5B8200C5CC61 /* AppDelegate */,
+				85972A0A1DCC5B4400C5CC61 /* Shared */,
+				85972A121DCC5B4400C5CC61 /* ViewController */,
 				1967CCA01D6B0778003327DC /* SubModules */,
-				1967CC861D6AFF9B003327DC /* AppDelegate */,
 				1967CC881D6AFF9B003327DC /* Assets */,
-				1967CC8A1D6AFF9B003327DC /* Shared */,
 				1967CC8B1D6AFF9B003327DC /* StoryBoard */,
-				1967CC901D6AFF9B003327DC /* ViewController */,
 				1967CC7C1D6AFEB3003327DC /* Info.plist */,
 			);
 			path = SocialLogin;
-			sourceTree = "<group>";
-		};
-		1967CC861D6AFF9B003327DC /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				1967CC871D6AFF9B003327DC /* AppDelegate.swift */,
-			);
-			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		1967CC881D6AFF9B003327DC /* Assets */ = {
@@ -123,19 +119,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		1967CC8A1D6AFF9B003327DC /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				1967CCA91D6B09CB003327DC /* SocialLogin-Bridging-Header.h */,
-				1967CCB11D6B19A6003327DC /* SLConstant.swift */,
-				1967CCB61D6B2760003327DC /* SLAlertHelper.swift */,
-				1967CCB81D6B3135003327DC /* SLFacebookManager.swift */,
-				1967CCBA1D6B3147003327DC /* SLLinkedInManager.swift */,
-				EC59928E1D6B8404002406B0 /* SLExtensions.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		1967CC8B1D6AFF9B003327DC /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,17 +126,6 @@
 				1967CC8E1D6AFF9B003327DC /* Main.storyboard */,
 			);
 			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		1967CC901D6AFF9B003327DC /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1967CCAF1D6B1998003327DC /* SLLoginViewController.swift */,
-				1967CCB31D6B1BB2003327DC /* SLProfileViewController.swift */,
-				1967CCBC1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift */,
-				EC59928A1D6B7A00002406B0 /* SLProfileImageCell.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		1967CCA01D6B0778003327DC /* SubModules */ = {
@@ -189,6 +161,40 @@
 				1967CCAB1D6B0EE9003327DC /* Bolts.framework */,
 			);
 			path = Bolt;
+			sourceTree = "<group>";
+		};
+		85972A0A1DCC5B4400C5CC61 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				85972A0B1DCC5B4400C5CC61 /* SLAlertHelper.swift */,
+				85972A0C1DCC5B4400C5CC61 /* SLConstant.swift */,
+				85972A0D1DCC5B4400C5CC61 /* SLExtensions.swift */,
+				85972A0E1DCC5B4400C5CC61 /* SLFacebookManager.swift */,
+				85972A0F1DCC5B4400C5CC61 /* SLInstagramManager.swift */,
+				85972A101DCC5B4400C5CC61 /* SLLinkedInManager.swift */,
+				85972A111DCC5B4400C5CC61 /* SocialLogin-Bridging-Header.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		85972A121DCC5B4400C5CC61 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				85972A131DCC5B4400C5CC61 /* SLInstagramLoginViewController.swift */,
+				85972A141DCC5B4400C5CC61 /* SLLoginViewController.swift */,
+				85972A151DCC5B4400C5CC61 /* SLProfileDetailsTableViewCell.swift */,
+				85972A161DCC5B4400C5CC61 /* SLProfileImageCell.swift */,
+				85972A171DCC5B4400C5CC61 /* SLProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		85972A231DCC5B8200C5CC61 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				85972A241DCC5B8200C5CC61 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		99A48088ACF20E39649DFC0D /* Frameworks */ = {
@@ -336,16 +342,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1967CCB91D6B3135003327DC /* SLFacebookManager.swift in Sources */,
-				EC59928B1D6B7A00002406B0 /* SLProfileImageCell.swift in Sources */,
-				EC59928F1D6B8404002406B0 /* SLExtensions.swift in Sources */,
-				1967CCBB1D6B3147003327DC /* SLLinkedInManager.swift in Sources */,
-				1967CCB21D6B19A6003327DC /* SLConstant.swift in Sources */,
-				1967CCB01D6B1998003327DC /* SLLoginViewController.swift in Sources */,
-				1967CCB71D6B2760003327DC /* SLAlertHelper.swift in Sources */,
-				1967CC921D6AFF9B003327DC /* AppDelegate.swift in Sources */,
-				1967CCB41D6B1BB2003327DC /* SLProfileViewController.swift in Sources */,
-				1967CCBD1D6B3B04003327DC /* SLProfileDetailsTableViewCell.swift in Sources */,
+				85972A251DCC5B8200C5CC61 /* AppDelegate.swift in Sources */,
+				85972A1B1DCC5B4400C5CC61 /* SLFacebookManager.swift in Sources */,
+				85972A1D1DCC5B4400C5CC61 /* SLLinkedInManager.swift in Sources */,
+				85972A1A1DCC5B4400C5CC61 /* SLExtensions.swift in Sources */,
+				85972A221DCC5B4400C5CC61 /* SLProfileViewController.swift in Sources */,
+				85972A1E1DCC5B4400C5CC61 /* SLInstagramLoginViewController.swift in Sources */,
+				85972A1F1DCC5B4400C5CC61 /* SLLoginViewController.swift in Sources */,
+				85972A1C1DCC5B4400C5CC61 /* SLInstagramManager.swift in Sources */,
+				85972A201DCC5B4400C5CC61 /* SLProfileDetailsTableViewCell.swift in Sources */,
+				85972A211DCC5B4400C5CC61 /* SLProfileImageCell.swift in Sources */,
+				85972A191DCC5B4400C5CC61 /* SLConstant.swift in Sources */,
+				85972A181DCC5B4400C5CC61 /* SLAlertHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
