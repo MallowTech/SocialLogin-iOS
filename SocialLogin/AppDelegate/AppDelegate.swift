@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
-    var googleIdToken: String?
     var googleImageURL: NSURL?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -135,7 +134,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
      func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
-            googleIdToken = user.authentication.idToken // Safe to send to the server
             let fullName = user.profile.name
             let email = user.profile.email
             if user.profile.hasImage == true {
