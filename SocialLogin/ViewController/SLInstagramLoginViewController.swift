@@ -20,7 +20,7 @@ class SLInstagramLoginViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         activityIndicator?.color = UIColor.slInstagramThemeColor()
         activityIndicator?.startAnimating()
-        webView.loadRequest(NSURLRequest(URL: NSURL(string: kInstagramAuthenticatePath + "?client_id=" + kClientId + "&redirect_uri=" + kRedirectUri + "&response_type=code")!))
+        webView.loadRequest(NSURLRequest(URL: NSURL(string: kInstagramAuthenticatePath + "?client_id=" + kClientId + "&redirect_uri=" + kRedirectUri + "&response_type=code&scope=public_content+likes")!))
     }
     
     

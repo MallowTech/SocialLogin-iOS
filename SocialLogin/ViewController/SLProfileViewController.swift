@@ -159,11 +159,9 @@ class SLProfileViewController: UIViewController, UITableViewDataSource, UITableV
             guard let detailsCell = tableView.dequeueReusableCellWithIdentifier(kProfileDetailCell, forIndexPath: indexPath) as? SLProfileDetailsTableViewCell else {
                 return UITableViewCell()
             }
-            
             let profile = self.profileArray
             detailsCell.titleLabel?.text = profile[indexPath.row].0
             detailsCell.valueLabel?.text = profile[indexPath.row].1
-            
             return detailsCell
         }
     }

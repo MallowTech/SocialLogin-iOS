@@ -12,6 +12,7 @@ class SLInstagramManager: NSObject {
 
     static let sharedInstance = SLInstagramManager()
     var details: [(String, String?)] = []
+    var accessToken: String?
 
     func userDetails(code: String, success: (Bool) -> Void , failure: (String) -> Void) {
         let params = ["client_id": kClientId,
@@ -55,13 +56,14 @@ class SLInstagramManager: NSObject {
                 failure(error)
             }
             if let accessToken = json["access_token"] as? String {
+                self.accessToken = accessToken
                 print(accessToken)
             }
             if let user = json["user"] as? [String : String] {
                 let name = user["full_name"]
                 let profilePicture = user["profile_picture"]
                 let userName = user["username"]
-                let details: [(String, String?)] = [("Picture", profilePicture),("Full Name", name!), ("email", "\(userName!)")]
+                let details: [(String, String?)] = [("Picture", profilePicture),("Full Name", name!), ("Username", "\(userName!)")]
                 self.details = details
                 dispatch_async(dispatch_get_main_queue(), {
                     success(true)
