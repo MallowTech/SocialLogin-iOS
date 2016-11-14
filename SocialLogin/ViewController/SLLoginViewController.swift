@@ -15,16 +15,20 @@ enum SLFacebookPermission: String {
     static let allValues = [PublicProfile, Email]
 }
 
-class SLLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class SLLoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate {
     
     @IBOutlet var facebookLoginButton: FBSDKLoginButton!
     @IBOutlet var linkedInLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
 
     
     // MARK: View Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Google sign in
+        GIDSignIn.sharedInstance().uiDelegate = self
         
         // Facebook Permissions
         facebookLoginButton.readPermissions = [SLFacebookPermission.PublicProfile.rawValue, SLFacebookPermission.Email.rawValue];
